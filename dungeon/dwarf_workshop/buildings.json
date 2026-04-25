@@ -1,0 +1,126 @@
+{
+    "buildings": {
+        "base_camp": {
+            "id": "base_camp",
+            "name": "Základní tábor",
+            "cost_grosh": 0,
+            "cost_resources": {},
+            "requires_research": null,
+            "effect": {
+                "storage_capacity_add": 10
+            },
+            "owned_by_default": true
+        },
+        "axe": {
+            "id": "axe",
+            "name": "Sekera",
+            "requires_exp": 0,
+            "cost_grosh": 2,
+            "cost_resources": {},
+            "requires_research": null,
+            "effect": {
+                "unlocks_activity": "collect_wood"
+            }
+        },
+        "pickaxe": {
+            "id": "pickaxe",
+            "name": "Krumpáč",
+            "requires_exp": 0,
+            "cost_grosh": 3,
+            "cost_resources": {},
+            "requires_research": null,
+            "effect": {
+                "unlocks_activities": ["collect_stone", "collect_coal"]
+            }
+        },
+        "storage_tent": {
+            "id": "storage_tent",
+            "name": "Skladištní stan",
+            "requires_exp": 0,
+            "cost_grosh": 5,
+            "cost_resources": {},
+            "requires_research": null,
+            "effect": {
+                "storage_capacity_add": 10
+            },
+            "stackable": true
+        },
+        "hand_saw": {
+            "id": "hand_saw",
+            "name": "Ruční pila",
+            "requires_exp": 35,
+            "cost_grosh": 2,
+            "cost_resources": {},
+            "requires_research": null,
+            "effect": {
+                "unlocks_activity": "make_planks"
+            }
+        },
+        "stone_workshop": {
+            "id": "stone_workshop",
+            "name": "Kamenická dílna",
+            "requires_exp": 45,
+            "cost_grosh": 5,
+            "cost_resources": { "wood": 2 },
+            "requires_research": null,
+            "effect": {
+                "unlocks_activity": "stonecutting"
+            }
+        },
+        "laboratory": {
+            "id": "laboratory",
+            "name": "Laboratoř",
+            "requires_exp": 45,
+            "cost_grosh": 5,
+            "cost_resources": { "wood": 1, "stone": 1 },
+            "requires_research": null,
+            "effect": {
+                "unlocks_activity": "research"
+            }
+        },
+        "marketplace": {
+            "id": "marketplace",
+            "name": "Tržiště",
+            "requires_exp": 80,
+            "cost_grosh": 10,
+            "cost_resources": { "planks": 5 },
+            "requires_research": null,
+            "effect": {
+                "unlocks_player_trading": true
+            }
+        },
+        "master_tent": {
+            "id": "master_tent",
+            "name": "Mistrovský stan",
+            "requires_exp": 150,
+            "cost_grosh": 60,
+            "cost_resources": { "worked_stone": 5 },
+            "requires_research": "specialization",
+            "effect": {
+                "unlocks_slot": 2
+            }
+        },
+        "rock_depot": {
+            "id": "rock_depot",
+            "name": "Skalní depot",
+            "requires_exp": 70,
+            "cost_grosh": 30,
+            "cost_resources": { "worked_stone": 5 },
+            "requires_research": "storage",
+            "effect": {
+                "storage_capacity_add": 50
+            }
+        },
+        "archive": {
+            "id": "archive",
+            "name": "Archiv",
+            "requires_exp": 100,
+            "cost_grosh": 40,
+            "cost_resources": { "planks": 10, "worked_stone": 5 },
+            "requires_research": "archiving",
+            "effect": {
+                "research_exp_multiplier": 1.5
+            }
+        }
+    }
+}

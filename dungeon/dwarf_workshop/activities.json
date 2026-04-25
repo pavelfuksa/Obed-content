@@ -1,0 +1,642 @@
+{
+    "activities": {
+        "beg": {
+            "id": "beg",
+            "name": "Žebrat",
+            "tier": 0,
+            "duration_seconds": 1200,
+            "exp_per_hour": 0.5,
+            "requires_building": null,
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "chance",
+                "outcomes": [
+                    { "probability": 0.4, "resource": "grosh", "amount": 1 },
+                    { "probability": 0.6, "resource": null, "amount": 0 }
+                ]
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 10,
+                    "cost_grosh": 1,
+                    "choices": [
+                        {
+                            "id": "decent_clothes",
+                            "name": "Slušné oblečení",
+                            "effect": { "chance_bonus": 0.2 }
+                        },
+                        {
+                            "id": "better_spot",
+                            "name": "Lepší místo",
+                            "effect": { "duration_add_seconds": -180 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 30,
+                    "cost_grosh": 3,
+                    "choices": [
+                        {
+                            "id": "touching_story",
+                            "name": "Dojemný příběh",
+                            "effect": { "outcome_override": "60pct_2gr" }
+                        },
+                        {
+                            "id": "experienced_beggar",
+                            "name": "Zkušený žebrák",
+                            "effect": { "exp_per_hour_add": 0.5 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 70,
+                    "cost_grosh": 7,
+                    "choices": [
+                        {
+                            "id": "golden_heart",
+                            "name": "Zlaté srdce okolí",
+                            "effect": { "bonus_chance": { "probability": 0.1, "amount": 3 } }
+                        },
+                        {
+                            "id": "beggar_wisdom",
+                            "name": "Žebrácká moudrost",
+                            "effect": { "exp_per_hour_add": 0.5 }
+                        }
+                    ]
+                }
+            ],
+            "max_level": 3
+        },
+        "steal": {
+            "id": "steal",
+            "name": "Krást",
+            "tier": 0,
+            "duration_seconds": 900,
+            "exp_per_hour": 0.5,
+            "requires_building": null,
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "chance",
+                "outcomes": [
+                    { "probability": 0.6, "resource": "grosh", "amount": 1 },
+                    { "probability": 0.25, "resource": "grosh", "amount": 2 },
+                    { "probability": 0.15, "resource": "grosh", "amount": -1 }
+                ]
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 10,
+                    "cost_grosh": 1,
+                    "choices": [
+                        {
+                            "id": "quick_fingers",
+                            "name": "Rychlé prsty",
+                            "effect": { "catch_chance_subtract": 0.05 }
+                        },
+                        {
+                            "id": "escape_routes",
+                            "name": "Lepší únikové trasy",
+                            "effect": { "duration_add_seconds": -120 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 30,
+                    "cost_grosh": 3,
+                    "choices": [
+                        {
+                            "id": "experienced_thief",
+                            "name": "Zkušený zloděj",
+                            "effect": { "high_outcome_bonus": 0.1 }
+                        },
+                        {
+                            "id": "stealth",
+                            "name": "Nenápadnost",
+                            "effect": { "catch_chance_subtract": 0.05 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 70,
+                    "cost_grosh": 7,
+                    "choices": [
+                        {
+                            "id": "master_thief",
+                            "name": "Mistr zloděj",
+                            "effect": { "top_outcome_chance": 0.25 }
+                        },
+                        {
+                            "id": "thief_golden_heart",
+                            "name": "Zloděj se zlatem v srdci",
+                            "effect": { "no_negative": true }
+                        }
+                    ]
+                }
+            ],
+            "max_level": 3
+        },
+        "cart_operator": {
+            "id": "cart_operator",
+            "name": "Operátor vozíku",
+            "tier": 1,
+            "duration_seconds": 36000,
+            "exp_per_hour": 1.0,
+            "requires_exp": 8,
+            "requires_building": null,
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "fixed",
+                "resource": "grosh",
+                "amount": 1
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "own_cart",
+                            "name": "Vlastní vozík",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "bicycle",
+                            "name": "Bicykl",
+                            "effect": { "duration_add_seconds": -7200 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "sieve",
+                            "name": "Přesívadlo",
+                            "effect": { "exp_per_hour_add": 1.0 }
+                        },
+                        {
+                            "id": "shorter_route",
+                            "name": "Kratší trasa",
+                            "effect": { "duration_add_seconds": -3600 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "motor_cart",
+                            "name": "Motorový vozík",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "loyal_customers",
+                            "name": "Zkušení zákazníci",
+                            "effect": { "double_output_chance": 0.15 }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        },
+        "collect_wood": {
+            "id": "collect_wood",
+            "name": "Sběr dřeva",
+            "tier": 1,
+            "duration_seconds": 43200,
+            "exp_per_hour": 1.0,
+            "requires_building": "axe",
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "fixed",
+                "resource": "wood",
+                "amount": 1
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "muscles",
+                            "name": "Svaly",
+                            "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "sharpen",
+                            "name": "Ostření",
+                            "effect": { "output_quantity_add": 1 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "scholar",
+                            "name": "Učenec",
+                            "effect": { "exp_per_hour_add": 1.0 }
+                        },
+                        {
+                            "id": "forest_maps",
+                            "name": "Lesní mapy",
+                            "effect": { "duration_add_seconds": -3600 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "sharpened_axe",
+                            "name": "Broušená sekera",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "expert_nose",
+                            "name": "Profíkův nos",
+                            "effect": { "bonus_chance": { "probability": 0.2, "amount": 1 } }
+                        },
+                        {
+                            "id": "experience",
+                            "name": "Zkušenosti",
+                            "effect": { "exp_per_hour_add": 1.0 }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        },
+        "collect_stone": {
+            "id": "collect_stone",
+            "name": "Sběr kamení",
+            "tier": 1,
+            "duration_seconds": 43200,
+            "exp_per_hour": 1.0,
+            "requires_building": "pickaxe",
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "fixed",
+                "resource": "stone",
+                "amount": 1
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "technique",
+                            "name": "Technika",
+                            "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "quality",
+                            "name": "Kvalita",
+                            "effect": { "output_quantity_add": 1 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "forest_knowledge",
+                            "name": "Lesní znalosti",
+                            "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "focus",
+                            "name": "Soustředění",
+                            "effect": { "exp_per_hour_add": 1.0 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "sharp_pickaxe",
+                            "name": "Ostrý krumpáč",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "geological_survey",
+                            "name": "Geologický průzkum",
+                            "effect": { "bonus_chance": { "probability": 0.15, "amount": 1 } }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        },
+        "collect_coal": {
+            "id": "collect_coal",
+            "name": "Těžba uhlí",
+            "tier": 1,
+            "duration_seconds": 50400,
+            "exp_per_hour": 1.0,
+            "requires_building": "pickaxe",
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "fixed",
+                "resource": "coal",
+                "amount": 1
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "mine_cart",
+                            "name": "Důlní vozík",
+                            "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "deep_mining",
+                            "name": "Hlubinná těžba",
+                            "effect": { "output_quantity_add": 1 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "ventilation",
+                            "name": "Ventilace",
+                            "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "coal_nose",
+                            "name": "Uhlíkový nos",
+                            "effect": { "exp_per_hour_add": 1.0 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "dusty_mines",
+                            "name": "Prašné doly",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "good_equipment",
+                            "name": "Dobrá výzbroj",
+                            "effect": { "bonus_chance": { "probability": 0.1, "amount": 1 } }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        },
+        "research": {
+            "id": "research",
+            "name": "Výzkum",
+            "tier": 1,
+            "duration_seconds": 72000,
+            "exp_per_hour": 2.0,
+            "requires_building": "laboratory",
+            "requires_research": null,
+            "input": null,
+            "output": {
+                "type": "fixed",
+                "resource": "research_points",
+                "amount": 1
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "methodology",
+                            "name": "Metodika",
+                            "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "genius",
+                            "name": "Génius",
+                            "effect": { "output_quantity_add": 1 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "card_system",
+                            "name": "Systém karet",
+                            "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "research_notes",
+                            "name": "Vědecké zápisky",
+                            "effect": { "exp_per_hour_add": 2.0 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "breakthroughs",
+                            "name": "Breakthroughs",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "mentoring",
+                            "name": "Mentoring",
+                            "effect": { "exp_per_hour_add": 2.0 }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        },
+        "make_planks": {
+            "id": "make_planks",
+            "name": "Výroba fošen",
+            "tier": 2,
+            "duration_seconds": 50400,
+            "exp_per_hour": 1.5,
+            "requires_building": "hand_saw",
+            "requires_research": "wood_processing",
+            "input": {
+                "resource": "wood",
+                "amount": 1
+            },
+            "output": {
+                "type": "fixed",
+                "resource": "planks",
+                "amount": 3
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "automation",
+                            "name": "Automatizace",
+                            "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "precise_cut",
+                            "name": "Přesný řez",
+                            "effect": { "output_quantity_add": 1 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "plane",
+                            "name": "Hoblík",
+                            "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "fire_waste",
+                            "name": "Odpad pro oheň",
+                            "effect": { "byproduct": { "probability": 0.2, "resource": "coal", "amount": 1 } }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "industrial_saw",
+                            "name": "Průmyslová pila",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "carpentry_master",
+                            "name": "Truhlářský mistr",
+                            "effect": { "exp_per_hour_add": 1.5 }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        },
+        "stonecutting": {
+            "id": "stonecutting",
+            "name": "Kamenictví",
+            "tier": 2,
+            "duration_seconds": 57600,
+            "exp_per_hour": 1.5,
+            "requires_building": "stone_workshop",
+            "requires_research": "stone_working",
+            "input": {
+                "resource": "stone",
+                "amount": 1
+            },
+            "output": {
+                "type": "fixed",
+                "resource": "worked_stone",
+                "amount": 2
+            },
+            "upgrades": [
+                {
+                    "level": 1,
+                    "exp_threshold": 50,
+                    "cost_grosh": 5,
+                    "choices": [
+                        {
+                            "id": "polisher",
+                            "name": "Leštička",
+                            "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "master_stonemason",
+                            "name": "Mistr kameník",
+                            "effect": { "output_quantity_add": 1 }
+                        }
+                    ]
+                },
+                {
+                    "level": 2,
+                    "exp_threshold": 150,
+                    "cost_grosh": 12,
+                    "choices": [
+                        {
+                            "id": "diamond_file",
+                            "name": "Diamantový pilník",
+                            "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "stone_wisdom",
+                            "name": "Kamenná moudrost",
+                            "effect": { "exp_per_hour_add": 1.5 }
+                        }
+                    ]
+                },
+                {
+                    "level": 3,
+                    "exp_threshold": 350,
+                    "cost_grosh": 30,
+                    "choices": [
+                        {
+                            "id": "improved_chisel",
+                            "name": "Vylepšené dláto",
+                            "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "architectural_precision",
+                            "name": "Architektonická přesnost",
+                            "effect": { "bonus_chance": { "probability": 0.15, "amount": 1 } }
+                        }
+                    ]
+                }
+            ],
+            "max_level": null
+        }
+    }
+}

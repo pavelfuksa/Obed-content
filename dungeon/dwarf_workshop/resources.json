@@ -1,0 +1,69 @@
+{
+    "resources": {
+        "grosh": {
+            "id": "grosh",
+            "name": "Groš",
+            "abbr": "gr",
+            "tier": 0,
+            "cap": null,
+            "system_buy": null,
+            "system_sell": null,
+            "is_currency": true
+        },
+        "research_points": {
+            "id": "research_points",
+            "name": "Výzkumný bod",
+            "abbr": "vb",
+            "tier": 0,
+            "cap": null,
+            "system_buy": null,
+            "system_sell": null,
+            "is_currency": false
+        },
+        "wood": {
+            "id": "wood",
+            "name": "Dřevo",
+            "abbr": "Dř",
+            "tier": 1,
+            "cap": 1,
+            "system_buy": 1.0,
+            "system_sell": 0.4
+        },
+        "stone": {
+            "id": "stone",
+            "name": "Kámen",
+            "abbr": "Ká",
+            "tier": 1,
+            "cap": 1,
+            "system_buy": 1.2,
+            "system_sell": 0.5
+        },
+        "coal": {
+            "id": "coal",
+            "name": "Uhlí",
+            "abbr": "Uh",
+            "tier": 1,
+            "cap": 1,
+            "system_buy": 2.0,
+            "system_sell": 0.8
+        },
+        "planks": {
+            "id": "planks",
+            "name": "Fošny",
+            "abbr": "Fo",
+            "tier": 2,
+            "cap": 2,
+            "system_buy": 4.0,
+            "system_sell": 1.8
+        },
+        "worked_stone": {
+            "id": "worked_stone",
+            "name": "Zpracovaný kámen",
+            "abbr": "ZK",
+            "tier": 2,
+            "cap": 2,
+            "system_buy": 5.0,
+            "system_sell": 2.0
+        }
+    }
+}

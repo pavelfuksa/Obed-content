@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "wood_processing": {
+            "id": "wood_processing",
+            "name": "Zpracování dřeva",
+            "requires_exp": 0,
+            "cost_points": 5,
+            "requires": [],
+            "unlocks_buildings": ["hand_saw"],
+            "unlocks_activities": ["make_planks"]
+        },
+        "advanced_wood": {
+            "id": "advanced_wood",
+            "name": "Pokročilé dřevo",
+            "requires_exp": 0,
+            "cost_points": 15,
+            "requires": ["wood_processing"],
+            "unlocks_buildings": [],
+            "unlocks_activities": [],
+            "effect": {
+                "building": "hand_saw",
+                "output_quantity_add": 1
+            }
+        },
+        "stone_working": {
+            "id": "stone_working",
+            "name": "Obrábění kamene",
+            "requires_exp": 0,
+            "cost_points": 5,
+            "requires": [],
+            "unlocks_buildings": ["stone_workshop"],
+            "unlocks_activities": ["stonecutting"]
+        },
+        "storage": {
+            "id": "storage",
+            "name": "Skladovatelství",
+            "requires_exp": 0,
+            "cost_points": 10,
+            "requires": [],
+            "unlocks_buildings": ["rock_depot"],
+            "unlocks_activities": []
+        },
+        "archiving": {
+            "id": "archiving",
+            "name": "Archivace",
+            "requires_exp": 60,
+            "cost_points": 20,
+            "requires": [],
+            "unlocks_buildings": ["archive"],
+            "unlocks_activities": []
+        },
+        "trade_networks": {
+            "id": "trade_networks",
+            "name": "Obchodní sítě",
+            "requires_exp": 70,
+            "cost_points": 30,
+            "requires": [],
+            "unlocks_buildings": ["marketplace"],
+            "unlocks_activities": [],
+            "effect": {
+                "system_sell_bonus": 0.20,
+                "max_market_offers_add": 3
+            }
+        },
+        "specialization": {
+            "id": "specialization",
+            "name": "Specializace",
+            "requires_exp": 100,
+            "cost_points": 60,
+            "requires": [],
+            "unlocks_buildings": ["master_tent"],
+            "unlocks_activities": [],
+            "effect": {
+                "unlocks_activity_slot": 2
+            }
+        },
+        "logistics": {
+            "id": "logistics",
+            "name": "Logistika",
+            "requires_exp": 150,
+            "cost_points": 100,
+            "requires": [],
+            "unlocks_buildings": [],
+            "unlocks_activities": [],
+            "effect": {
+                "unlocks_efektivita_upgrade": true
+            }
+        }
+    }
+}
