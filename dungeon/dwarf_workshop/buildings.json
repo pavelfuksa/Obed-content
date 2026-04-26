@@ -14,6 +14,7 @@
         "axe": {
             "id": "axe",
             "name": "Sekera",
+            "description": "Odemkne aktivitu Sběr dřeva.",
             "requires_exp": 0,
             "cost_grosh": 2,
             "cost_resources": {},
@@ -25,6 +26,7 @@
         "pickaxe": {
             "id": "pickaxe",
             "name": "Krumpáč",
+            "description": "Odemkne aktivity Sběr kamení a Sběr uhlí.",
             "requires_exp": 0,
             "cost_grosh": 3,
             "cost_resources": {},
@@ -36,6 +38,7 @@
         "storage_tent": {
             "id": "storage_tent",
             "name": "Skladištní stan",
+            "description": "+10 míst ve skladu. Možno koupit vícekrát.",
             "requires_exp": 0,
             "cost_grosh": 5,
             "cost_resources": {},
@@ -48,6 +51,7 @@
         "hand_saw": {
             "id": "hand_saw",
             "name": "Ruční pila",
+            "description": "Odemkne aktivitu Výroba prken.",
             "requires_exp": 35,
             "cost_grosh": 2,
             "cost_resources": {},
@@ -59,6 +63,7 @@
         "stone_workshop": {
             "id": "stone_workshop",
             "name": "Kamenická dílna",
+            "description": "Odemkne aktivitu Kamenické řezbářství. Vyžaduje 2 dřevo.",
             "requires_exp": 45,
             "cost_grosh": 5,
             "cost_resources": { "wood": 2 },
@@ -70,6 +75,7 @@
         "laboratory": {
             "id": "laboratory",
             "name": "Laboratoř",
+            "description": "Odemkne aktivitu Výzkum — získává výzkumné body pro strom výzkumu.",
             "requires_exp": 45,
             "cost_grosh": 5,
             "cost_resources": { "wood": 1, "stone": 1 },
@@ -81,6 +87,7 @@
         "marketplace": {
             "id": "marketplace",
             "name": "Tržiště",
+            "description": "Odemkne tab Trh — můžeš nabízet suroviny ostatním hráčům.",
             "requires_exp": 80,
             "cost_grosh": 10,
             "cost_resources": { "planks": 5 },
@@ -92,6 +99,7 @@
         "master_tent": {
             "id": "master_tent",
             "name": "Mistrovský stan",
+            "description": "Odemkne druhý výrobní slot — můžeš spustit dvě aktivity najednou.",
             "requires_exp": 150,
             "cost_grosh": 60,
             "cost_resources": { "worked_stone": 5 },
@@ -103,6 +111,7 @@
         "rock_depot": {
             "id": "rock_depot",
             "name": "Skalní depot",
+            "description": "+50 míst ve skladu.",
             "requires_exp": 70,
             "cost_grosh": 30,
             "cost_resources": { "worked_stone": 5 },
@@ -114,6 +123,7 @@
         "archive": {
             "id": "archive",
             "name": "Archiv",
+            "description": "Výzkum probíhá 1,5× rychleji.",
             "requires_exp": 100,
             "cost_grosh": 40,
             "cost_resources": { "planks": 10, "worked_stone": 5 },

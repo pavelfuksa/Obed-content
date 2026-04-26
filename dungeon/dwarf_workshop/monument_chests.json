@@ -1,0 +1,31 @@
+{
+  "bronze": [
+    { "weight": 30, "type": "resource", "resource": "hlasonia",  "amount": 80 },
+    { "weight": 10, "type": "resource", "resource": "hlasonium", "amount": 200 },
+    { "weight": 30, "type": "resource", "resource": "food",      "amount": 80 },
+    { "weight": 20, "type": "coins",    "amount": 4 },
+    { "weight":  5, "type": "chest",    "chest": "silver" },
+    { "weight":  5, "type": "resource", "resource": "food",      "amount": 160 }
+  ],
+  "silver": [
+    { "weight": 25, "type": "resource", "resource": "hlasonia",  "amount": 180 },
+    { "weight": 10, "type": "resource", "resource": "hlasonium", "amount": 450 },
+    { "weight": 25, "type": "resource", "resource": "food",      "amount": 180 },
+    { "weight": 25, "type": "coins",    "amount": 10 },
+    { "weight": 10, "type": "resource", "resource": "food",      "amount": 350 },
+    { "weight":  5, "type": "chest",    "chest": "gold" }
+  ],
+  "gold": [
+    { "weight": 20, "type": "resource", "resource": "hlasonia",  "amount": 350 },
+    { "weight": 10, "type": "resource", "resource": "hlasonium", "amount": 900 },
+    { "weight": 20, "type": "resource", "resource": "food",      "amount": 350 },
+    { "weight": 30, "type": "coins",    "amount": 25 },
+    { "weight": 15, "type": "resource", "resource": "food",      "amount": 700 },
+    { "weight":  2, "type": "resource", "resource": "agility",   "amount": 1 },
+    { "weight":  3, "type": "chest",    "chest": "gold" }
+  ],
+  "crafting": {
+    "bronze_to_silver": 3,
+    "silver_to_gold": 3
+  }
+}
