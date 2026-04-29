@@ -12,64 +12,74 @@
             "output": {
                 "type": "chance",
                 "outcomes": [
-                    { "probability": 0.4, "resource": "grosh", "amount": 1 },
-                    { "probability": 0.6, "resource": null, "amount": 0 }
+                    { "probability": 0.1, "resource": "grosh", "amount": 1 },
+                    { "probability": 0.8, "resource": null, "amount": 0 }
                 ]
             },
             "upgrades": [
                 {
                     "level": 1,
                     "exp_threshold": 10,
-                    "cost_grosh": 1,
+                    "cost_grosh": 2,
                     "choices": [
                         {
                             "id": "decent_clothes",
                             "name": "Slušné oblečení",
-                            "effect": { "chance_bonus": 0.2 }
+                            "effect": { "chance_bonus": 0.1 }
                         },
                         {
                             "id": "better_spot",
                             "name": "Lepší místo",
                             "effect": { "duration_add_seconds": -180 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
                 {
                     "level": 2,
                     "exp_threshold": 30,
-                    "cost_grosh": 3,
+                    "cost_grosh": 5,
                     "choices": [
-                        {
-                            "id": "touching_story",
-                            "name": "Dojemný příběh",
-                            "effect": { "outcome_override": "60pct_2gr" }
-                        },
                         {
                             "id": "experienced_beggar",
                             "name": "Zkušený žebrák",
                             "effect": { "exp_per_hour_add": 0.5 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
                 {
                     "level": 3,
                     "exp_threshold": 70,
-                    "cost_grosh": 7,
+                    "cost_grosh": 15,
                     "choices": [
                         {
                             "id": "golden_heart",
                             "name": "Zlaté srdce okolí",
-                            "effect": { "bonus_chance": { "probability": 0.1, "amount": 3 } }
+                            "effect": { "bonus_chance": { "probability": 0.1, "amount": 2 } }
                         },
                         {
                             "id": "beggar_wisdom",
                             "name": "Žebrácká moudrost",
                             "effect": { "exp_per_hour_add": 0.5 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
             ],
-            "max_level": 3
+            "max_level": null
         },
         "steal": {
             "id": "steal",
@@ -83,8 +93,9 @@
             "output": {
                 "type": "chance",
                 "outcomes": [
-                    { "probability": 0.6, "resource": "grosh", "amount": 1 },
-                    { "probability": 0.25, "resource": "grosh", "amount": 2 },
+                    { "probability": 0.7, "resource": "grosh", "amount": 0 },
+                    { "probability": 0.2, "resource": "grosh", "amount": 1 },
+                    { "probability": 0.05, "resource": "grosh", "amount": 2 },
                     { "probability": 0.15, "resource": "grosh", "amount": -1 }
                 ]
             },
@@ -103,13 +114,18 @@
                             "id": "escape_routes",
                             "name": "Lepší únikové trasy",
                             "effect": { "duration_add_seconds": -120 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
                 {
                     "level": 2,
                     "exp_threshold": 30,
-                    "cost_grosh": 3,
+                    "cost_grosh": 8,
                     "choices": [
                         {
                             "id": "experienced_thief",
@@ -120,28 +136,38 @@
                             "id": "stealth",
                             "name": "Nenápadnost",
                             "effect": { "catch_chance_subtract": 0.05 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
                 {
                     "level": 3,
                     "exp_threshold": 70,
-                    "cost_grosh": 7,
+                    "cost_grosh": 20,
                     "choices": [
                         {
                             "id": "master_thief",
                             "name": "Mistr zloděj",
-                            "effect": { "top_outcome_chance": 0.25 }
+                            "effect": { "top_outcome_chance": 0.12 }
                         },
                         {
                             "id": "thief_golden_heart",
                             "name": "Zloděj se zlatem v srdci",
                             "effect": { "no_negative": true }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
             ],
-            "max_level": 3
+            "max_level": null
         },
         "cart_operator": {
             "id": "cart_operator",
@@ -173,6 +199,11 @@
                             "id": "bicycle",
                             "name": "Bicykl",
                             "effect": { "duration_add_seconds": -7200 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -190,6 +221,11 @@
                             "id": "shorter_route",
                             "name": "Kratší trasa",
                             "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -207,6 +243,11 @@
                             "id": "loyal_customers",
                             "name": "Zkušení zákazníci",
                             "effect": { "double_output_chance": 0.15 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
@@ -242,6 +283,11 @@
                             "id": "sharpen",
                             "name": "Ostření",
                             "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -259,6 +305,11 @@
                             "id": "forest_maps",
                             "name": "Lesní mapy",
                             "effect": { "duration_add_seconds": -3600 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -281,6 +332,11 @@
                             "id": "experience",
                             "name": "Zkušenosti",
                             "effect": { "exp_per_hour_add": 1.0 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
@@ -316,6 +372,11 @@
                             "id": "quality",
                             "name": "Kvalita",
                             "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -333,6 +394,11 @@
                             "id": "focus",
                             "name": "Soustředění",
                             "effect": { "exp_per_hour_add": 1.0 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -350,6 +416,11 @@
                             "id": "geological_survey",
                             "name": "Geologický průzkum",
                             "effect": { "bonus_chance": { "probability": 0.15, "amount": 1 } }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
@@ -385,6 +456,11 @@
                             "id": "deep_mining",
                             "name": "Hlubinná těžba",
                             "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -402,6 +478,11 @@
                             "id": "coal_nose",
                             "name": "Uhlíkový nos",
                             "effect": { "exp_per_hour_add": 1.0 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -419,6 +500,11 @@
                             "id": "good_equipment",
                             "name": "Dobrá výzbroj",
                             "effect": { "bonus_chance": { "probability": 0.1, "amount": 1 } }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
@@ -454,6 +540,11 @@
                             "id": "genius",
                             "name": "Génius",
                             "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -471,6 +562,11 @@
                             "id": "research_notes",
                             "name": "Vědecké zápisky",
                             "effect": { "exp_per_hour_add": 2.0 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -488,6 +584,11 @@
                             "id": "mentoring",
                             "name": "Mentoring",
                             "effect": { "exp_per_hour_add": 2.0 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
@@ -526,6 +627,11 @@
                             "id": "precise_cut",
                             "name": "Přesný řez",
                             "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -543,6 +649,11 @@
                             "id": "fire_waste",
                             "name": "Odpad pro oheň",
                             "effect": { "byproduct": { "probability": 0.2, "resource": "coal", "amount": 1 } }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -560,6 +671,11 @@
                             "id": "carpentry_master",
                             "name": "Truhlářský mistr",
                             "effect": { "exp_per_hour_add": 1.5 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }
@@ -598,6 +714,11 @@
                             "id": "master_stonemason",
                             "name": "Mistr kameník",
                             "effect": { "output_quantity_add": 1 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -615,6 +736,11 @@
                             "id": "stone_wisdom",
                             "name": "Kamenná moudrost",
                             "effect": { "exp_per_hour_add": 1.5 }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 },
@@ -632,6 +758,11 @@
                             "id": "architectural_precision",
                             "name": "Architektonická přesnost",
                             "effect": { "bonus_chance": { "probability": 0.15, "amount": 1 } }
+                        },
+                        {
+                            "id": "efektivita",
+                            "name": "Efektivita",
+                            "effect": { "efektivita_count": 1 }
                         }
                     ]
                 }

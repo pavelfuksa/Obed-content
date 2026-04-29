@@ -25,7 +25,7 @@
             "name": "Dřevo",
             "abbr": "Dř",
             "tier": 1,
-            "cap": 1,
+            "cap": 10,
             "system_buy": 1.0,
             "system_sell": 0.4
         },
@@ -34,7 +34,7 @@
             "name": "Kámen",
             "abbr": "Ká",
             "tier": 1,
-            "cap": 1,
+            "cap": 10,
             "system_buy": 1.2,
             "system_sell": 0.5
         },
@@ -43,7 +43,7 @@
             "name": "Uhlí",
             "abbr": "Uh",
             "tier": 1,
-            "cap": 1,
+            "cap": 10,
             "system_buy": 2.0,
             "system_sell": 0.8
         },
@@ -52,7 +52,7 @@
             "name": "Fošny",
             "abbr": "Fo",
             "tier": 2,
-            "cap": 2,
+            "cap": 10,
             "system_buy": 4.0,
             "system_sell": 1.8
         },
@@ -61,7 +61,7 @@
             "name": "Zpracovaný kámen",
             "abbr": "ZK",
             "tier": 2,
-            "cap": 2,
+            "cap": 10,
             "system_buy": 5.0,
             "system_sell": 2.0
         }
